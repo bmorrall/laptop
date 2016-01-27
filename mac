@@ -185,6 +185,7 @@ find_latest_ruby() {
 }
 
 ruby_version="$(find_latest_ruby)"
+ruby_version="2.2.4"
 # shellcheck disable=SC2016
 append_to_zshrc 'eval "$(rbenv init - --no-rehash)"' 1
 eval "$(rbenv init -)"
@@ -205,3 +206,5 @@ if [ -f "$HOME/.laptop.local" ]; then
   # shellcheck disable=SC1090
   . "$HOME/.laptop.local"
 fi
+
+fancy_echo "Done!"
